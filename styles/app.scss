@@ -35,7 +35,8 @@ $max-contentwidth: 60rem;
 
 .grid-item {
   border: 0.2rem solid $brand-primary;
-  width: $max-contentwidth / 3;
+  width: $max-contentwidth / 4;
+  flex-grow: 1;
   margin: $gutter;
   padding: $gutter;
 }
@@ -51,7 +52,38 @@ img {
   width: 100%;
 }
 
+h2 {
+  text-align: center;
+  color: $brand-primary;
+}
+
+p {
+  color: $brand-primary;
+  text-align: center;
+}
+
 li {
   display: inline;
   list-style: none;
+}
+
+.shop-button:hover {
+  display: flex;
+  color: red;
+}
+
+.shop-item-buttons {
+  width: 100%;
+}
+
+.shop-button {
+  color: $brand_primary;
+  border: 0.1rem solid $brand_primary;
+}
+
+
+@media screen and (max-width: $max-contentwidth) {
+  .container {
+    background: green;
+  }
 }

@@ -34,7 +34,6 @@ $max-contentwidth: 60rem;
 }
 
 .grid-item {
-  border: 0.2rem solid $brand-primary;
   width: $max-contentwidth / 4;
   flex-grow: 1;
   margin: $gutter;
@@ -42,7 +41,21 @@ $max-contentwidth: 60rem;
 }
 
 .shop-item {
+  border: 0.2rem solid $brand-primary;
 }
+
+.shop-item-buttons {
+  display: flex;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+
+}
+
+.shop-button {
+  width: 20%;
+}
+
 
 .shirt-div {
   width: 100%;
@@ -63,7 +76,6 @@ p {
 }
 
 li {
-  display: inline;
   list-style: none;
 }
 
@@ -72,9 +84,6 @@ li {
   color: red;
 }
 
-.shop-item-buttons {
-  width: 100%;
-}
 
 .shop-button {
   color: $brand_primary;
@@ -82,8 +91,9 @@ li {
 }
 
 
+
 @media screen and (max-width: $max-contentwidth) {
   .container {
-    background: green;
+    background: tan;
   }
 }

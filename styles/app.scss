@@ -34,31 +34,57 @@ $max-contentwidth: 60rem;
 }
 
 .grid-item {
-  width: $max-contentwidth / 4;
+  width: calc($max-contentwidth / 3);
   flex-grow: 1;
   margin: $gutter;
   padding: $gutter;
 }
 
 .shop-item {
-  border: 0.2rem solid $brand-primary;
+  border: 0.3rem solid $brand-primary;
 }
 
 .shop-item-buttons {
   display: flex;
+  border-top: 0.3rem solid $brand_primary;
   margin: 0;
   width: 100%;
   padding: 0;
 
+  :nth-child(5n) {
+    border-right: none;
+  }
 }
 
+
+
+.shop-item-description {
+  padding: $gutter;
+}
+
+
+
 .shop-button {
-  width: 20%;
+  width: calc(100% / 5);
+  padding: 1rem;
+
+  color: $brand_primary;
+  border-right: 0.2rem solid $brand_primary;
+  text-align: center;
+
+  &:hover {
+    color: $brand_white;
+    background: $brand-primary;
+  }
 }
 
 
 .shirt-div {
   width: 100%;
+  padding-top: $gutter;
+  padding-right: $gutter;
+  padding-left: $gutter;
+
 }
 
 img {
@@ -68,6 +94,10 @@ img {
 h2 {
   text-align: center;
   color: $brand-primary;
+  padding-top: $gutter;
+  padding-right: $gutter;
+  padding-left: $gutter;
+
 }
 
 p {
@@ -79,17 +109,95 @@ li {
   list-style: none;
 }
 
-.shop-button:hover {
+.dropdown {
+  position: relative;
+}
+
+.fa {
+  font-size: 1.7rem;
+  padding: 0.1rem;
+}
+
+.shirt-size {
+  font-size: 1.7rem;
+  align-items: center;
+}
+
+.dropdown__options {
+  display: none;
+  position: absolute;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+
+  left: -0.0rem;
+  top: -9rem;
+
+  &-item-shirt-color-pink {
+    width: 100%;
+    color: $pink;
+    border: 0.2rem solid $brand-primary;
+
+    &:hover {
+      font-size: 2rem;
+    }
+
+  }
+
+  &-item-shirt-color-blue {
+    color: $blue;
+    border: 0.2rem solid $brand-primary;
+
+    &:hover {
+      font-size: 2rem;
+    }
+
+  }
+
+  &-item-shirt-color-yellow {
+    color: $yellow;
+    border: 0.2rem solid $brand-primary;
+
+    &:hover {
+      font-size: 2rem;
+    }
+
+  }
+
+  &-item-shirt-color-green {
+    color: $green;
+    border: 0.2rem solid $brand-primary;
+
+    &:hover {
+      font-size: 2rem;
+    }
+
+  }
+
+  &-item {
+    border: 0.2rem solid $brand-primary;
+  }
+}
+
+
+.dropdown:hover .dropdown__options {
   display: flex;
-  color: red;
+  flex-direction: column;
+  background: $brand-white;
+
+  position: absolute;
+  border: 0.2rem solid $brand-primary;
+
 }
 
+.dropdown__options-item {
+  font-size: 1.7rem;
+  padding: 0.1rem;
 
-.shop-button {
-  color: $brand_primary;
-  border: 0.1rem solid $brand_primary;
+  &:hover {
+    font-size: 2rem;
+  }
 }
-
 
 
 @media screen and (max-width: $max-contentwidth) {

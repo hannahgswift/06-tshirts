@@ -114,12 +114,17 @@ li {
 }
 
 .fa {
-  font-size: 1.7rem;
-  padding: 0.1rem;
+  font-size: 1.9rem;
+  padding: 0.3rem;
+
+  &:hover {
+    font-size: 2.1rem;
+  }
 }
 
 .shirt-size {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
+  padding: 0.3rem;
   align-items: center;
 }
 
@@ -131,7 +136,7 @@ li {
   width: 100%;
 
   left: -0.0rem;
-  top: -9rem;
+  top: -11.9rem;
 
   &-item-shirt-color-pink {
     width: 100%;
@@ -190,13 +195,19 @@ li {
 
 }
 
+
 .dropdown__options-item {
   font-size: 1.7rem;
-  padding: 0.1rem;
+  padding: 0.3rem;
 
   &:hover {
     font-size: 2rem;
   }
+}
+
+.dropdown__options {
+  color: $brand_primary;
+  background: $brand-white;
 }
 
 

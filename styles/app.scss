@@ -34,9 +34,8 @@ $max-contentwidth: 60rem;
 }
 
 .grid-item {
-  width: calc($max-contentwidth / 3);
-  flex-grow: 1;
-  margin: $gutter;
+  width: calc(100% / 3);
+  // flex-grow: 1;
   padding: $gutter;
 }
 
@@ -66,7 +65,7 @@ $max-contentwidth: 60rem;
 
 .shop-button {
   width: calc(100% / 5);
-  padding: 1rem;
+  padding: 0;
 
   color: $brand_primary;
   border-right: 0.2rem solid $brand_primary;
@@ -125,7 +124,6 @@ li {
 .shirt-size {
   font-size: 1.9rem;
   padding: 0.3rem;
-  align-items: center;
 }
 
 .dropdown__options {
@@ -135,7 +133,7 @@ li {
   padding: 0;
   width: 100%;
 
-  left: -0.0rem;
+  left: 0rem;
   top: -11.9rem;
 
   &-item-shirt-color-pink {
@@ -216,3 +214,14 @@ li {
     background: tan;
   }
 }
+
+// @media screen and (min-width: 500px) and (max-width: 980px) {
+//   .container {
+//     background: pink;
+//   }
+//
+//   .row {
+//     display: flex;
+//     flex-flow: column;
+//   }
+// }

@@ -134,7 +134,7 @@ li {
   width: 100%;
 
   left: 0rem;
-  top: -11.9rem;
+  top: -11.5rem;
 
   &-item-shirt-color-pink {
     width: 100%;
@@ -189,7 +189,7 @@ li {
   background: $brand-white;
 
   position: absolute;
-  border: 0.2rem solid $brand-primary;
+  // border-right: 0.2rem solid $brand-primary;
 
 }
 
@@ -209,19 +209,16 @@ li {
 }
 
 
-@media screen and (max-width: $max-contentwidth) {
+
+@media screen and (min-width: 500px) and (max-width: 980px) {
   .container {
     background: tan;
   }
-}
 
-// @media screen and (min-width: 500px) and (max-width: 980px) {
-//   .container {
-//     background: pink;
-//   }
-//
-//   .row {
-//     display: flex;
-//     flex-flow: column;
-//   }
-// }
+  .row {
+    display: flex;
+    flex-flow: row;
+  }
+
+
+}

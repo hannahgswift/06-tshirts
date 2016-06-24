@@ -237,7 +237,7 @@ li {
     border-right: none;
     border-left: none;
     border-top: 0.3rem solid $brand-primary;
-
+    flex-grow: 1;
   }
 
   .dropdown:hover .dropdown__options {

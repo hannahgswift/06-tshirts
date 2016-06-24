@@ -213,7 +213,6 @@ li {
 
 @media screen and (min-width: 500px) and (max-width: 980px) {
   .container {
-    background: lightgray;
     max-width: 500px;
     margin: 0 auto;
   }
@@ -221,7 +220,6 @@ li {
   .row {
     display: block;
     flex-flow: column;
-
   }
 
   .grid-item {
@@ -232,28 +230,80 @@ li {
 
   .shop-item {
     display: flex;
-    flex-direction: row;
+  }
+
+  .shirt-div {
+    padding: $gutter;
   }
 
   .shop-item-buttons {
     flex-direction: column;
+    justify-content: space-between;
     width: 10%;
+    border-top: 0;
     border-left: 0.3rem solid $brand-primary;
 
   }
 
   .shop-button {
-    border: none;
-    // border-bottom: 0.3rem solid $brand-primary;
+    width: 100%;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    border-top: 0.3rem solid $brand-primary;
+
   }
 
   .dropdown:hover .dropdown__options {
     flex-direction: row;
+    background: $brand_white;
   }
+
+
 
   .dropdown__options {
     position: relative;
+    top: -0.5rem;
+    left: -9.5rem;
+    background: $brand-white;
   }
 
+  .shirt-color-list {
+    top: -0.1rem;
+    left: -10.2rem;
+  }
 
+  .shirt-size:hover {
+    background: $brand_primary;
+  }
+
+  .dropdown__options-item-shirt-color-pink, .dropdown__options-item-shirt-color-blue, .dropdown__options-item-shirt-color-yellow, .dropdown__options-item-shirt-color-green {
+    background: $brand-white;
+  }
+
+  .dropdown__options-items-s, .dropdown__options-items-m, .dropdown__options-items-l, .dropdown__options-items-xl {
+    background: $brand_white;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: auto;
+    background: tan;
+  }
+
+  .row {
+    display: block;
+    flex-flow: column;
+    width: 100%;
+  }
+
+  .grid-item {
+    width: 100%;
+  }
 }

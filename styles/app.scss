@@ -113,7 +113,7 @@ li {
 
 .shirt-size {
   font-size: 1.9rem;
-  padding: 0.3rem;
+  text-align: center;
 }
 
 .dropdown__options {
@@ -122,9 +122,7 @@ li {
   text-align: center;
   padding: 0;
   width: 100%;
-
-  left: 0rem;
-  top: -11.5rem;
+  bottom: 100%;
 
   &-item-shirt-color-pink {
     width: 100%;
@@ -184,11 +182,15 @@ li {
 
 
 .dropdown__options-item {
-  font-size: 1.7rem;
-  padding: 0.3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  // width: 100%;
 
   &:hover {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -238,7 +240,12 @@ li {
     border-left: none;
     border-top: 0.3rem solid $brand-primary;
     flex-grow: 1;
+
+      &:nth-child(1) {
+        border-top: none;
+      }
   }
+
 
   .dropdown:hover .dropdown__options {
     flex-direction: row;
@@ -249,15 +256,11 @@ li {
 
   .dropdown__options {
     position: relative;
-    top: -0.5rem;
-    left: -9.5rem;
+    right: 412%;
+    bottom: -7%;
     background: $brand-white;
   }
 
-  .shirt-color-list {
-    top: -0.1rem;
-    left: -10.2rem;
-  }
 
   .shirt-size:hover {
     background: $brand_primary;

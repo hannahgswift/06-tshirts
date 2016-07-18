@@ -213,7 +213,7 @@ li {
   .grid-item {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: auto;
   }
 
   .shop-item {
@@ -256,7 +256,8 @@ li {
 
   .dropdown__options {
     position: absolute;
-    right: 412%;
+    width: auto;
+    right: 100%;
     bottom: -7%;
     background: $brand-white;
   }

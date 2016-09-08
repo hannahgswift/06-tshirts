@@ -15,6 +15,10 @@ $yellow: #e5b178;
 $gutter: 1rem;
 $max-contentwidth: 60rem;
 
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -264,5 +268,26 @@ li {
 
   .grid-item {
     width: 100%;
+  }
+}
+
+.footer {
+  background: $green;
+  &__content {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    color: $brand-white;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-transform: uppercase;
+    a {
+      color: $brand-primary;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        color: $brand-white;
+      }
+    }
   }
 }

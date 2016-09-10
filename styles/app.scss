@@ -1,6 +1,293 @@
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+
 @import 'yoga';
 @import 'normalize';
-
-$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'font-awesome';
 @import 'box-sizing';
+@import 'container';
+
+$brand-primary: #3473b5;
+$brand-white: #fff;
+$pink: #e577aa;
+$blue: #72bbe9;
+$green: #7abe93;
+$yellow: #e5b178;
+$gutter: 1rem;
+$max-contentwidth: 60rem;
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.grid-item {
+  display: flex;
+  width: calc(100% / 3);
+  padding: $gutter;
+}
+
+.shop-item {
+  border: 0.3rem solid $brand-primary;
+}
+
+.shop-item-buttons {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-top: 0.3rem solid $brand-primary;
+
+  :nth-child(5n) {
+    border-right: 0;
+  }
+}
+
+.shop-button {
+  width: calc(100% / 5);
+  padding: 0;
+  border-right: 0.2rem solid $brand-primary;
+  color: $brand-primary;
+  list-style: none;
+  text-align: center;
+
+  &:hover {
+    background: $brand-primary;
+    color: $brand-white;
+  }
+}
+
+.shirt-div {
+  width: 100%;
+  padding-top: $gutter;
+  padding-right: $gutter;
+  padding-left: $gutter;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.shop-item-title {
+  padding-top: $gutter;
+  padding-right: $gutter;
+  padding-left: $gutter;
+  color: $brand-primary;
+  text-align: center;
+}
+
+.shop-item-description {
+  padding: $gutter;
+  color: $brand-primary;
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.fa {
+  padding: 0.3rem;
+  font-size: 1.9rem;
+}
+
+.shirt-size {
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+.dropdown__options {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  padding: 0;
+  background: $brand-white;
+  color: $brand-primary;
+  text-align: center;
+
+  &-item-shirt-color-pink {
+    width: 100%;
+    border: 0.2rem solid $brand-primary;
+    color: $pink;
+
+    &:hover {
+      font-size: 2rem;
+    }
+  }
+
+  &-item-shirt-color-blue {
+    border: 0.2rem solid $brand-primary;
+    color: $blue;
+
+    &:hover {
+      font-size: 2rem;
+    }
+  }
+
+  &-item-shirt-color-yellow {
+    border: 0.2rem solid $brand-primary;
+    color: $yellow;
+
+    &:hover {
+      font-size: 2rem;
+    }
+  }
+
+  &-item-shirt-color-green {
+    border: 0.2rem solid $brand-primary;
+    color: $green;
+
+    &:hover {
+      font-size: 2rem;
+    }
+  }
+
+  &-item {
+    border: 0.2rem solid $brand-primary;
+  }
+}
+
+.dropdown:hover .dropdown__options {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background: $brand-white;
+}
+
+.dropdown__options-item {
+  padding-top: 0.3rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+
+  &:hover {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 980px) {
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .row {
+    display: block;
+    flex-flow: column;
+  }
+
+  .grid-item {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+
+  .shop-item {
+    display: flex;
+  }
+
+  .shirt-div {
+    padding: $gutter;
+  }
+
+  .shop-item-buttons {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 10%;
+    border-top: 0;
+    border-left: 0.3rem solid $brand-primary;
+  }
+
+  .shop-button {
+    flex-grow: 1;
+    width: 100%;
+    border-top: 0.3rem solid $brand-primary;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+
+    &:nth-child(1) {
+      border-top: 0;
+    }
+  }
+
+  .dropdown:hover .dropdown__options {
+    flex-direction: row;
+    background: $brand_white;
+  }
+
+  .dropdown__options {
+    position: absolute;
+    right: 100%;
+    bottom: -7%;
+    width: auto;
+    background: $brand-white;
+  }
+
+  .shirt-size:hover {
+    background: $brand-primary;
+  }
+
+  .dropdown__options-item-shirt-color-blue,
+  .dropdown__options-item-shirt-color-green,
+  .dropdown__options-item-shirt-color-pink,
+  .dropdown__options-item-shirt-color-yellow {
+    background: $brand-white;
+  }
+
+  .dropdown__options-items-l,
+  .dropdown__options-items-m,
+  .dropdown__options-items-s,
+  .dropdown__options-items-xl {
+    background: $brand_white;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 350px;
+    margin: auto;
+  }
+
+  .row {
+    display: block;
+    flex-flow: column;
+    width: 100%;
+  }
+
+  .grid-item {
+    width: 100%;
+  }
+}
+
+.footer {
+  background: $green;
+  &__content {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    color: $brand-white;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-transform: uppercase;
+    a {
+      color: $brand-primary;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        color: $brand-white;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+$gutter: 1rem;
+$max-contentwidth: 60rem;
+
+.outer-container {
+  padding: $gutter;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: $max-contentwidth;
+  margin: auto;
+}
